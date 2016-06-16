@@ -74,3 +74,5 @@ main = do
   testInorder
   testPostOrder
 
+foldTree :: (a -> b ->b) -> b -> BinaryTree a -> b
+foldTree f base tree = foldr f base (inorder tree)
