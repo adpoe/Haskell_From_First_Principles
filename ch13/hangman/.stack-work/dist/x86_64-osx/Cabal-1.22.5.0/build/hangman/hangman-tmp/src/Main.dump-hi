@@ -1,0 +1,196 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-08 04:37:30.022124 UTC
+
+interface main@main:Main 7103
+  interface hash: 95a5dd5c10ceb26efc420bf4fcae5658
+  ABI hash: 152ccede3edfb168d1df278c20c482db
+  export-list hash: 84e51ac0de104a99d80f15590e4264ed
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c4d9cf7c8d6a602207741a999e4d7820
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.allWords
+  Main.gameWords
+  Main.main
+  Main.maxWordLength
+  Main.minWordLength
+  Main.randomWord
+  Main.randomWord'
+  Main.WordList
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
+                      ghc-prim-0.4.0.0 integer-gmp-1.0.0.0
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL*
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.Char c8f827952d4111ae2e47c0b105217cdb
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:Data.OldList d8fd80b0e14aa085ce6219cd89dad356
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
+import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL:System.Random d515be7800d601546639722a30f2fed4
+6f73c11f8ce4731fe58f7571b46c7c5e
+  type WordList = [GHC.Base.String]
+8e5f53b9bdbb5922dc73c9c9c216d858
+  allWords :: GHC.Types.IO Main.WordList
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.allWords1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <Main.WordList>_R)) -}
+eb1aa67134bbb8c5ca2962e350d63e8d
+  allWords1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Main.WordList #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.allWords2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2, Data.OldList.lines ipv3 #) } }) -}
+8ee2bd7607e7040598a3386a25a9646b
+  allWords2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "data/dict.txt"#) -}
+40e7da50a368d5a81297613f966a881b
+  gameWords :: GHC.Types.IO Main.WordList
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.gameWords1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <Main.WordList>_R)) -}
+8407a3104a8dd5bd4311f12e0a7bb8b6
+  gameWords1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Main.WordList #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.allWords2
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    GHC.List.filter
+                      @ [GHC.Types.Char]
+                      Main.gameWords2
+                      (Data.OldList.lines ipv3) #) } }) -}
+e0ea4eafcf076b966d7d539cc60c0a2f
+  gameWords2 :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ w :: GHC.Base.String ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char w 0 of ww2 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># ww2 5) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.<# ww2 9) } }) -}
+4e00e90cfb2acd8c4ac927dd47809ee0
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+7cbd7a6c0fbb31326cb0bbbeb923c8bf
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main2
+                   GHC.Types.True
+                   eta) -}
+e0b1708f8c404a45c535e09e3c0c56f9
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hello world"#) -}
+2bf5f2defded413ab5b8f4d8418fbe36
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+87c14380ec23834b29abe84e42515f47
+  maxWordLength :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9) -}
+e7bac9ca2cd0871306be27d58a537ecd
+  minWordLength :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5) -}
+79384215bd9dbbe5bb6376a5a092c730
+  randomWord :: Main.WordList -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.randomWord1
+                  `cast`
+                (<Main.WordList>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Base.String>_R)) -}
+10e4e80035022c7f59afce5ad314ac19
+  randomWord' :: GHC.Types.IO GHC.Base.String
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.randomWord'1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.Base.String>_R)) -}
+dee0dd6b079b36873547ffcfb238a33d
+  randomWord'1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Main.gameWords1 s of ds1 { (#,#) ipv ipv1 ->
+                 Main.randomWord1 ipv1 ipv }) -}
+2fe2a72deaa3574aa760f12da1e79fe5
+  randomWord1 ::
+    Main.WordList
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: (\ wl :: Main.WordList
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Random.$fRandomInt3
+                        (Main.randomWord2,
+                         case GHC.List.$wlenAcc @ [GHC.Types.Char] wl 0 of ww2 { DEFAULT ->
+                         GHC.Types.I# (GHC.Prim.-# ww2 1) })
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv, GHC.List.!! @ GHC.Base.String wl ipv1 #) }) -}
+9f899a46c09436470126268b14436e20
+  randomWord2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
